@@ -3,14 +3,14 @@
 function devolverPrimerElemento(array) {
   // Devuelve el primer elemento de un  array (pasado por parametro)
   // Tu código:
-  return array[0]
+  return array[0];
 }
 
 
 function devolverUltimoElemento(array) {
   // Devuelve el último elemento de un array
   // Tu código:
-  return array.pop()
+  return array.pop();
   //return array[array.length -1]
 }
 
@@ -18,7 +18,7 @@ function devolverUltimoElemento(array) {
 function obtenerLargoDelArray(array) {
   // Devuelve el largo de un array
   // Tu código:
-  return array.length
+  return array.length;
 }
 
 
@@ -27,12 +27,20 @@ function incrementarPorUno(array) {
   // Aumenta cada entero por 1
   // y devuelve el array
   // Tu código:
-  var arr = []
+  var arr = [];
   for(let i=0; i<array.length; i++)
   {
-    arr.push(array[i]+1)
+    arr.push(array[i]+1);
   }
-  return arr
+  return arr;
+  /**
+   for(let i=0;i<array.lenght;i++)
+   {
+     array[i]= array[i] +1;
+   }
+   return array;
+  }
+   */
   
 }
 
@@ -65,7 +73,7 @@ function dePalabrasAFrase(palabras) {
   // con espacios entre cada palabra
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
   // Tu código:
-  return palabras.join(" ")
+  return palabras.join(" ");
 
 }
 
@@ -74,11 +82,13 @@ function arrayContiene(array, elemento) {
   // Comprueba si el elemento existe dentro de "array"
   // Devuelve "true" si está, o "false" si no está
   // Tu código:
-  for(let i=0; i<array.length; i++)
+  for(let i=0; i<array.length -1; i++)
   {
-    if(array[i] === elemento) return true
+    if(array[i] === elemento) return true;
   }
-  return false
+  return false;
+  //otra solucion
+  //return array.includes(elemnto);
 
 }
 
@@ -108,7 +118,7 @@ function promedioResultadosTest(resultadosTest) {
       promedio = suma / resultadosTest.length
   }
   return promedio*/
-  return agregarNumeros(resultadosTest) / resultadosTest.length
+  return agregarNumeros(resultadosTest) / resultadosTest.length;
 }
 
 
@@ -117,7 +127,7 @@ function numeroMasGrande(numeros) {
   // Devuelve el número más grande
   // Tu código:
   //return Math.max(...numeros); //la funcion Math.max() devuelve el numero mayor de un array
-  mayor = numeros[0];
+   var mayor = numeros[0];
   for(let i=0;i<numeros.length;i++)
   {
     if(mayor < numeros[i])
@@ -139,7 +149,7 @@ function multiplicarArgumentos() {
   let producto = 1;
   for(let i=0;i<arguments.length;i++)
   {
-    producto *= arguments[i]
+    producto *= arguments[i];
   }
   return producto
 
@@ -165,7 +175,8 @@ function diaDeLaSemana(numeroDeDia) {
   //Suponga que los días de la semana se codifican como 1 = Domingo, 2 = Lunes y así sucesivamente. 
   //Realiza una función que dado el número del día de la semana, retorne: Es fin de semana
   //si el día corresponde a Sábado o Domingo y “Es dia Laboral” en caso contrario. 
-  //Escribe tu código aquí   
+  //Escribe tu código aquí  
+  //Solucion 1 
   /**if (numeroDeDia === 1 || -numeroDeDia ===7 ) return "Es fin de semana
       else
         "Es dia Laboral"
@@ -243,6 +254,23 @@ function breakStatement(numero) {
   //devolver: "Se interrumpió la ejecución"
   //Pista: usá el statement 'break'
   // Tu código:
+  let num = [];
+  let copia = numero;
+  for(let i=0;i<10;i++)
+  {
+    copia = copia + 2;
+    
+    if(copia === i) break;
+    else{
+      num.push(copia);
+    }
+  }
+  if(i<10){
+    return "Se interrumpió la ejecución"
+  }
+  else{
+    return num;
+  }
 }
 
 
