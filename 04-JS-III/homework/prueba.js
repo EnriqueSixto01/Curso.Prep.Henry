@@ -98,3 +98,20 @@ function empiezaConNueve(n) {
 console.log(empiezaConNueve(956));
 console.log(empiezaConNueve(56));
 console.log(empiezaConNueve(9));
+/*************************************************************************/
+function mayorACien(array) {
+  //La función recibe un array con enteros entre 0 y 200. Recorrer el array y guardar en un nuevo array sólo los
+  //valores mayores a 100 (no incluye el 100). Finalmente devolver el nuevo array.
+  // Tu código:
+  var newarr = [];
+  for(let i=0; i<array.length;i++)
+  {
+    if(array[i]> 100)
+    {
+      newarr.push(array[i]);
+    }
+  }
+  return newarr;
+}
+
+console.log(mayorACien([100,200,5,8,500]));

@@ -177,7 +177,7 @@ function diaDeLaSemana(numeroDeDia) {
   //si el día corresponde a Sábado o Domingo y “Es dia Laboral” en caso contrario. 
   //Escribe tu código aquí  
   //Solucion 1 
-  /**if (numeroDeDia === 1 || -numeroDeDia ===7 ) return "Es fin de semana
+  /**if (numeroDeDia === 1 || numeroDeDia ===7 ) return "Es fin de semana
       else
         "Es dia Laboral"
   */
@@ -243,6 +243,16 @@ function mayorACien(array) {
   //La función recibe un array con enteros entre 0 y 200. Recorrer el array y guardar en un nuevo array sólo los
   //valores mayores a 100 (no incluye el 100). Finalmente devolver el nuevo array.
   // Tu código:
+  var newarr = [];
+  for(let i=0; i<array.length;i++)
+  {
+    if(array[i]> 100)
+    {
+      newarr.push(array[i]);
+    }
+  }
+  return newarr;
+
 }
 
 
