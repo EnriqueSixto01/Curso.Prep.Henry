@@ -115,3 +115,48 @@ function mayorACien(array) {
 }
 
 console.log(mayorACien([100,200,5,8,500]));
+/***********************************************************************/
+function breakStatement(numero) {
+  //Iterar en un bucle aumentando en 2 el numero recibido hasta un límite de 10 veces.
+  //Guardar cada nuevo valor en un array. 
+  //Devolver el array
+  //Si en algún momento el valor de la suma y la cantidad de iteraciones coinciden, debe interrumpirse la ejecución y 
+  //devolver: "Se interrumpió la ejecución"
+  //Pista: usá el statement 'break'
+  // Tu código:
+  let num = [];
+  let copia = numero;
+  for(let i=0;i<10;i++)
+  {
+    copia +=2;
+    
+    if(copia === i) break;
+    else{
+      num.push(copia);
+    }
+  }
+  
+  if(copia<10)
+  {
+    return "Se interrumpió la ejecución"
+  }
+  else{
+    return num;
+  }
+}
+
+console.log(breakStatement(2));
+console.log(breakStatement(100));
+
+/**************************************** continue */
+i = 0;
+n = 0;
+while (i < 5) {
+   i++;
+   if (i == 3)
+      continue;
+   n += i;
+}
+
+console.log(i);
+console.log(n);

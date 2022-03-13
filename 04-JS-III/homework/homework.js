@@ -227,17 +227,20 @@ function mesesDelAño(array) {
   //Si alguno de los meses no está, devolver: "No se encontraron los meses pedidos"
   // Tu código:
   let meses = []
-  
+
   for(let i=0;i<array.length;i++)
   {
-    if(array[i]=== "Enero" && array[i] === "Marzo" && array[i] === "Noviembre")
+    if(array[i]=== "Marzo" || array[i] === "Noviembre" || array[i] === "Enero")
     {
       meses.push(array[i])
     }
   }
-  return "No se encontraron los meses pedidos"
+  if (meses.length !==3)
+  {
+    return "No se encontraron los meses pedidos"
+  }
+  return meses;
 }
-
 
 function mayorACien(array) {
   //La función recibe un array con enteros entre 0 y 200. Recorrer el array y guardar en un nuevo array sólo los
@@ -268,14 +271,16 @@ function breakStatement(numero) {
   let copia = numero;
   for(let i=0;i<10;i++)
   {
-    copia = copia + 2;
+    copia +=2;
     
     if(copia === i) break;
     else{
       num.push(copia);
     }
   }
-  if(i<10){
+  
+  if(copia<10)
+  {
     return "Se interrumpió la ejecución"
   }
   else{
@@ -291,6 +296,15 @@ function continueStatement(numero) {
   //Cuando el número de iteraciones alcance el valor 5, no se suma en ese caso y se continua con la siguiente iteración
   //Pista: usá el statement 'continue'
   // Tu código:
+  let noArr = [];
+  for(let i=0; i<10; i++)
+  {
+    if(i === 5)   //continue solo se ejecuta cuando se cumple la condicion del if, una vez hecho, se regresa a evaluar
+      continue;   //la siguiente iteracion del for.  
+      numero += 2;  //de esta linea hacia abajo no se ejecuta el codigo, hasta la siguiente iteracion
+      noArr.push(numero);      
+  }
+  return noArr;
 }
 
 
