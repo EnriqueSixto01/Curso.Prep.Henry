@@ -4,14 +4,14 @@ function mayuscula(nombre) {
   //La función recibe un nombre y debe devolver el mismo que recibe pero con su primer letra en mayúscula
   //ej: Recibe "mario" ----> Devuelve "Mario"
   //Tu código:
-  
+  //nombre[0]  = nombre[0].toUpperCase();
   return nombre.charAt(0).toUpperCase() + nombre.slice(1);
 }
 
 function invocarCallback(cb) {
   // Invoca al callback `cb`
   //Tu código:
-  return cb(); //dentro de el argumento cb que se pasa como argumento a invocarCallback, hay otra funcion.
+   cb(); //dentro de el argumento cb que se pasa como argumento a invocarCallback, hay otra funcion.
 }
 
 function operacionMatematica(n1, n2, cb) {
@@ -29,7 +29,10 @@ function sumarArray(numeros, cb) {
   let sum =0;
   for(let i=0;i<numeros.length;i++)
   {
-    sum += numeros[i];
+    if(numeros[i] % 1 === 0){
+      sum += numeros[i];
+    }
+    
   }
 
   cb(sum);
@@ -46,6 +49,8 @@ function forEach(array, cb) {
 
   });
 
+  //array.forEach((elemento) => cb(elemento));
+
 }
 
 function map(array, cb) {
@@ -59,7 +64,11 @@ function map(array, cb) {
    newArr.push(cb(array[i]))
  }
  return newArr;
+
+ //con map
+//return array.map((elemento)=> cb(elemento));
 }
+
 
 function filter(array) {
   //Filtrar todos los elementos del array que comiencen con la letra "a".
@@ -72,6 +81,14 @@ function filter(array) {
     newArr.push(array[i])
   }
   return newArr;
+
+  //con el metodo .filter
+  //return array.filter((item) => item[0] === "a");
+
+  //return array.filter(function(item)
+  //  if(item[0] === "a"){
+  // return item;
+  //});
 }
 
 // No modificar nada debajo de esta línea
