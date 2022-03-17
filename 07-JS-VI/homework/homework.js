@@ -66,7 +66,7 @@ function map(array, cb) {
  return newArr;
 
  //con map
-//return array.map((elemento)=> cb(elemento));
+//return array.map((elemento => cb(elemento)));
 }
 
 

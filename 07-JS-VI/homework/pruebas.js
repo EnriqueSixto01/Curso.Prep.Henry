@@ -1,4 +1,3 @@
-const { numeroMasGrande } = require("../../04-JS-III/homework/homework");
 
 const string = "enrique";
 
@@ -56,6 +55,9 @@ let modifiedArr = arr.map(function(element){   /*La function() callback es llama
 
 console.log(modifiedArr); //mostramos el nuevo arreglo con los elemntos multiplicados por 3
 
+//Con función flecha
+let modifiedArr2 = arr.map(x => x*2);
+console.log(modifiedArr2);
 
 let arr2 = [2, 3, 5, 7]
 
@@ -65,3 +67,16 @@ arr2.map(function(element, index, array){
     console.log(array);
     return element;
 }, 80);
+/**********************************************************************************/
+function callback(array){
+    return array * 3;
+  }
+  
+function map(array,cb){
+
+    return array.map((i => cb(i)));
+}
+  
+  
+  
+  console.log(map([1,2,3],callback));
