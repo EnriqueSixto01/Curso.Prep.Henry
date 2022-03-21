@@ -1,4 +1,3 @@
-const { CleanOptions } = require("simple-git");
 
 function Usuario(nombre, github){
     this.nombre = nombre;
@@ -34,18 +33,7 @@ function Person(first, last, age, eye) {
   const myFather = new Person("John", "Doe", 50, "blue");
   console.log("My father is " + myFather.name());
   /*********************************************************/
- /*class Persona {
-    constructor(objeto) {
-      // Crea el constructor:
-      this.nombre = objeto.nombre,
-      this.apellido = objeto.apellido,
-      this.edad = objeto.edad,
-      this.domicilio = objeto.domicilio
-    }
-    detalle(){
-    
-}
-*/
+
 function newPeople(nombre,apellido,edad,dir)
 {
   let yio = new Persona({nombre,apellido,edad,dir})
@@ -97,5 +85,6 @@ console.log(car1);    //Devuelve un nuevo objeto Carro con caracteristicas difer
 }
 
 
-let car2 = new Carro("mazda",2022,"Rojo");
-console.log(car2.detalle());*/
+let car3 = new Carro("mazda",2022,"Rojo");
+console.log(car3.detalle());
+console.log(car3);*/
