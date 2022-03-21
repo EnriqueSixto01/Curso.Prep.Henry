@@ -69,7 +69,7 @@ function agregarPropiedad(objeto, property) {
       return false;
   }
 
-  const pass ={
+  const pass ={                     //creamos un objeto
       password: "enrique123"
   };
   console.log(verificarPassword(pass,"enrique"));
