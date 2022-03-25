@@ -34,9 +34,9 @@ function Person(first, last, age, eye) {
   console.log("My father is " + myFather.name());
   /*********************************************************/
 
-function newPeople(nombre,apellido,edad,dir)
+function newPeople(nombre,apellido,edad,domicilio)
 {
-  let yio = new Persona({nombre,apellido,edad,dir})
+  let yio = new Persona({nombre,apellido,edad,domicilio})
   return yio;
 }
 function Persona(objeto)
