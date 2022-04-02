@@ -4,6 +4,11 @@ function crearGato(nombre, edad) {
     // Agrega un método (funcion) llamado "meow" que devuelva el string "Meow!"
     // Devuelve el objeto
     // Tu código:
+    //Hat 3 manerasa de acceder a un objeto
+    //1. objeto[propiedad]
+    //2. objeto["propiedad"]
+    //3. let aux = "propiedad";
+    //   objeto[propiedad]
     var  gato={
       nombre:nombre,
       edad:edad,
@@ -15,7 +20,9 @@ function crearGato(nombre, edad) {
     return gato;
 }
 
-console.log(crearGato("nuget",2));
+let cat = crearGato("nuget",2);
+console.log(cat.meow());
+
 
 /*************************************************************************************************/
 function agregarPropiedad(objeto, property) {
@@ -29,9 +36,13 @@ function agregarPropiedad(objeto, property) {
   
   }
 
-  console.log(agregarPropiedad(1,"x"));
-  console.log(agregarPropiedad(2,"y"));
-  console.log(agregarPropiedad(3,"z"));
+  const persona = {
+    nombre: "Enrique",
+    edad: 26
+  }
+
+  console.log(agregarPropiedad(persona,"direccion"))
+
   /*****************************************************************/
 
   function tieneEmail(usuario) {

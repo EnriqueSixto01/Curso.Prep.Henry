@@ -29,8 +29,8 @@ function agregarPropiedad(objeto, property) {
   //objeto[name]
 
     objeto[property] = null;  //Se pone entre corchetes y sin comillas cuando no conocemos el valor de la propiedad
-    return objeto;            //de ese objeto 
-
+    return objeto;            //de ese objeto o esa propiedad esta dentro de una variable.
+                              //En este caso se pasa el nombre de la propiedad por argumento. EL argumento es property
 }
 
 function invocarMetodo(objeto, metodo) {
@@ -66,7 +66,7 @@ function nuevoUsuario(nombre, email, password) {
   // Crea un nuevo objeto con las propiedades coincidiendo con los argumentos que se pasan a la función
   // Devuelve el objeto
   // Tu código:
-  //cuando el nombre de la variable que se pasa por argumento es igial al nombre de la propiedad se pueden omitir y solo
+  //cuando el nombre de la variable que se pasa por argumento es igual al nombre de la propiedad se pueden omitir y solo
   //colocar la propiedad
     const usuario ={
       nombre,
