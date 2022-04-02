@@ -44,7 +44,7 @@ function deObjetoAmatriz(objeto){
   }
   console.log(arr.length); 
 
-/************************************es capicuo *******************************************************/
+/************+************************es capicuo *******************************************************/
   let num = 373;
   let cap = "";
   let aux = num.toString(); //convertimos un entero a string :"3 7 3"
@@ -175,8 +175,8 @@ function asAmirror(str) {
   return res;*/
 }
 const mirror = "The Henry Challenge is close!";
-//const espejo = mirror.split(" ");
-//console.log(espejo);
+const espejo = mirror.split(" ");
+console.log(espejo);
 console.log(asAmirror(mirror));
  
 /**************************************function numberOfCharacters(string)************************************/
