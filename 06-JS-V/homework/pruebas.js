@@ -54,9 +54,13 @@ function Persona(objeto)
       Domicilio: this.domicilio
     }
   }
-let dany = new Persona({nombre: "dany", apellido:"sachez", edad:26 ,domicilio: "palosolo"});
+let dany = new Persona({nombre: "dany", apellido:"Sanchez", edad:26 ,domicilio: "palo solo"});
 console.log(dany.detalle()); //El metodo detalle me devuelve el mismo objeto que le envio
-console.log(newPeople("Yio","Velazquez",26,"manchaII"));//la funcion newPeople devuelve un nuevo objeto Persona con datos distintos
+//la funcion newPeople devuelve un nuevo objeto Persona con datos distintos,
+//es decir, creamos una nueva instancia de opbeto Persona pero a traves de una funcion
+console.log(newPeople("Yio","Velazquez",26,"manchaII"));
+//Aplicamos el metodo detalle a la nueva instancia de objeto que se encuentra en la funcion newPeople
+console.log(newPeople("Yio","Velazquez",26,"manchaII").detalle());
 /********************************************************************* */
 
 function Carro(marca,year,color){
