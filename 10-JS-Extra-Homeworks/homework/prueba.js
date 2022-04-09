@@ -272,3 +272,25 @@ console.log(buscoInterseccion([4,2,3],[1,3,4]))
       console.log(i,numbers[i]);//imprime el indice y lo que hay en el indice de cada elemento
   }
 */
+/******************************************************************************************** */
+function numberOfCharacters(string) {
+  //La función recibe un string. Recorre el srting y devuelve el caracter con el número de veces que aparece 
+  //en formato par clave-valor.
+  //Ej: Recibe ---> "adsjfdsfsfjsdjfhacabcsbajda" || Devuelve ---> { a: 5, b: 2, c: 2, d: 4, f: 4, h:1, j: 4, s: 5 } 
+  //Escribe tu código aquí
+  let str = string.split('');
+//const names = ['Alice', 'Bob', 'Tiff', 'Bruce', 'Alice']
+
+let countedNames = str.reduce(function (allNames, name) {
+if (name in allNames) {
+  allNames[name]++
+}
+else {
+  allNames[name] = 1
+}
+return allNames
+}, {})
+  return countedNames
+}
+
+console.log(numberOfCharacters("adsjfdsfsfjsdjfhacabcsbajda"))
