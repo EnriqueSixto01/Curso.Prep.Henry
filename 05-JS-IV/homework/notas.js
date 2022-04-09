@@ -79,16 +79,23 @@ const guitarra ={
     //Sumar todas las edades de los amigos
     sum =0;
     let ages =[]
-    for(let i in persona){                          //Este for itera sobre cada objeto del arreglo de objetos de persona
-        for(let j in persona[i].amigos){                //Este for itera sobre cada objeto del arreglo de objetos de la propiedad amigos
-            ages.push(persona[i].amigos[j].edad)
+    let prom =0;
+    for(let i in persona){                      //Este for itera sobre cada objeto del arreglo de objetos de persona
+        for(let j in persona[i].amigos){       //Este for itera sobre cada objeto del arreglo de objetos de la propiedad amigos
+          ages.push(persona[i].amigos[j].edad) 
+          sum += persona[i].amigos[j].edad
+            //console.log(sum)
             
-            console.log(sum)
-            console.log(ages)
         }
     }
-    //console.log(ages)
-    //console.log(sum)
+    prom = sum/ages.length
+    
+    //Mostramos un nuevo array donde estan todas las edades
+    console.log(ages)
+    //Mostramos la suma total de todas las edades
+    console.log("La suma total de edades es: " + sum)
+    //Mostramos el promedio de las edades
+    console.log("El promedio de edades es: " + prom)
 
     /********************************************* THIS *************************************************/
     //Definimos una funcion afuera de un objeto que luego se agregara como valor a la propiedad de los objetos ibiza y nissan.
@@ -102,8 +109,8 @@ const guitarra ={
         masRapido: function(){
             console.log("Soy un carro muy rapido")
          },
-         km: km                     //Al aprametro km del objeto ibiza se le asigna la funcion km
-    }                               //el parametro tiene que tener el mimo nombre que la funcion
+         km: km                     //Al prametro km del objeto ibiza se le asigna la funcion km
+    }                               //El parametro tiene que tener el mimo nombre que la funcion
 
     //llamamos al método masRapido del objeto carro
     ibiza.masRapido();
