@@ -123,16 +123,14 @@ function buscoInterseccion(arreglo1, arreglo2){
   let u = arreglo1.concat(arreglo2).sort();
   for(let i =0; i<u.length; i++)
   {
-    if(u[i + 1] === u[i])
+    //const item = u[i];
+    if(u[i + 1] === u[i] && !union.includes(u[i]))
     {
       union.push(u[i])
     }
   }
   return union;
-  
-
 }
-
 
 
 // No modificar nada debajo de esta línea
